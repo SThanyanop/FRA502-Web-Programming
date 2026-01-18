@@ -33,29 +33,20 @@ header h1 {
     justify-content: center;
     align-content: center;
     margin: 0.4%;
-    
 }
 
-.page {
-    width: 24%;
-    height: 180px;
-    background-color: #006F9E;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin: 0.4%;
-    
-}
-
-footer {
+button {
     background-color: #006F9E;
     color: #fff;
     width: 98%;
     height: 60px;
     margin: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-footer p {
+button p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     padding: 20px;
@@ -68,15 +59,5 @@ footer p {
 }
 
 .image_link:hover {
-    filter: grayscale(70%);
-}
-
-.facebook_link {
-    height: 160px;
-    width:   160px;
-    margin: 2% 0 1% 10%;
-}
-
-.facebook_link:hover {
     filter: grayscale(70%);
 }
