@@ -1,0 +1,123 @@
+
+.profile_display_btn {
+    position: fixed;
+    top: 50%;
+    left: 3%;
+    transform: translate(-3%, -50%);
+
+    width: 8vw;
+    height: 64vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+
+    border: 1px solid;
+}
+
+.profile_select_btn{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.profile_holder {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+
+    width: 24vw;
+    height: 72vh;
+
+    border: 1px solid;
+}
+
+#main_profile{
+    top: 40%;
+    left: 18%;
+    transform: translate(-18%, -40%);
+}
+
+#logo{
+    top: 60%;
+    left: 22%;
+    transform: translate(-22%, -60%);
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-90%, -50%);
+
+    width: 52vw;
+    height: 64vh;
+
+    border: 1px solid;
+}
+
+h1 {
+    position: absolute;
+    top: 1%;
+    left: 10%;
+    transform: translate(-10%, -1%);
+    border: 1px solid;
+
+    width: 40vw;
+    height: 12vh;
+}
+
+p1 {
+    position: absolute;
+    top: 64%;
+    left: 40%;
+    transform: translate(-40%, -64%);
+    border: 1px solid;
+
+    width: 48vw;
+    height: 36vh;
+}
+
+.card_select_display {
+    position: absolute;
+    top: 95%;
+    left: 92%;
+    transform: translate(-92%, -95%);
+    border: 1px solid;
+
+    width: 40vw;
+    height: 10vh;
+    
+}
+
+.card_location{
+    position: absolute;
+    border: 1px solid;
+}
+
+.right_btn{
+    position: absolute;
+
+    top: 70%;
+    left: 95%;
+    transform: translate(-95%, -70%);
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.left_btn{
+    position: absolute;
+
+    top: 70%;
+    left: 80%;
+    transform: translate(-80%, -70%);
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
