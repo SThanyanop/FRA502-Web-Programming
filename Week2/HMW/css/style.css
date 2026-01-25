@@ -1,3 +1,6 @@
+body {
+    overflow: hidden;
+}
 
 .profile_display_btn {
     position: fixed;
@@ -17,7 +20,7 @@
     border: 1px solid;
 }
 
-.profile_select_btn{
+.profile_select_btn {
     width: 90px;
     height: 90px;
     border-radius: 50%;
@@ -25,8 +28,8 @@
 
 .profile_holder {
     position: absolute;
-    top: 13%;
-    left: 15%;
+    top: 12%;
+    left: 14%;
 
     width: 24vw;
     height: 72vh;
@@ -35,10 +38,60 @@
 
     opacity: 0;
     transform: translateY(15%);
-    transition: opacity 0.5s ease, transform 0.5s ease
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    display: grid;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto max-content;
+    color: rgb(255, 253, 253);
+    padding: 1.5rem;
+
+
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 3px solid white;
+    }
+
+    &:before {
+        grid-row: 1 / 2;
+        border-right: none;
+        border-bottom: none;
+    }
+
+    &:after {
+        grid-row: 1 / span 2;
+        border-left: none;
+    }
+
+    h2 {
+		margin: 1rem 1rem -.5rem 0;
+		font-family: 'Pragati Narrow', sans-serif;
+		font-size: 1rem;
+		max-width: 100%;
+	}
 }
 
-.profile_holder.show{
+#main_profile{
+    background: #333 url(https://media1.tenor.com/m/epNMHGvRyHcAAAAd/gigachad-chad.gif) center;
+    background-size: cover;
+}
+
+#sub_profile{
+    background: #333 url(https://media1.tenor.com/m/3Sykma8la9gAAAAC/reze-tongue-out-reze-chainsaw-man-moving-her-head.gif) center;
+    background-size: cover;
+}
+
+#logo{
+    background: #333 url(https://media1.tenor.com/m/uk9xO0xpWoIAAAAC/burger-eating.gif) center;
+    background-size: cover;
+}
+
+.profile_holder.show {
     opacity: 1;
     transform: translateX(0)
 }
@@ -46,19 +99,21 @@
 .card {
     position: absolute;
     top: 18%;
-    left: 43%;
+    left: 44%;
 
-    width: 52vw;
+    width: 54vw;
     height: 64vh;
 
     border: 1px solid;
 
     opacity: 0;
     transform: translateX(15%);
-    transition: opacity 0.5s ease, transform 0.5s ease
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    overflow: hidden;
 }
 
-.card.show{
+.card.show {
     opacity: 1;
     transform: translateX(0);
 }
@@ -95,10 +150,10 @@ p1 {
 
     width: 40vw;
     height: 10vh;
-    
+
 }
 
-.card_location{
+.card_location {
     position: absolute;
     border: 1px solid;
 
@@ -110,7 +165,7 @@ p1 {
     height: 1vh;
 }
 
-.right_btn{
+.right_btn {
     position: absolute;
 
     top: 70%;
@@ -122,7 +177,7 @@ p1 {
     border-radius: 50%;
 }
 
-.left_btn{
+.left_btn {
     position: absolute;
 
     top: 70%;
