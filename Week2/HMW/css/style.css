@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
 body {
     overflow: hidden;
+    font-family: 'Roboto';
+
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .profile_display_btn {
@@ -18,12 +24,32 @@ body {
     gap: 15%;
 
     border: 1px solid;
+
+    border-radius: 50px;
 }
 
 .profile_select_btn {
     width: 90px;
     height: 90px;
     border-radius: 50%;
+
+}
+
+.profile_display_btn:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    background: #fff;
+    left: 45%;
+    height: 2px;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.7;
+}
+
+.profile_display_btn:hover:before {
+    width: 100%;
+    left: 0;
 }
 
 .profile_holder {
@@ -69,27 +95,23 @@ body {
     }
 
     h2 {
-		margin: 1rem 1rem -.5rem 0;
-		font-family: 'Pragati Narrow', sans-serif;
-		font-size: 1rem;
-		max-width: 100%;
-	}
+        margin: 1rem 1rem -.5rem 0;
+        font-family: 'Pragati Narrow', sans-serif;
+        font-size: 2rem;
+        max-width: 100%;
+    }
 }
 
-#main_profile{
+#main_profile {
     background: #333 url(https://media1.tenor.com/m/epNMHGvRyHcAAAAd/gigachad-chad.gif) center;
     background-size: cover;
 }
 
-#sub_profile{
+#sub_profile {
     background: #333 url(https://media1.tenor.com/m/3Sykma8la9gAAAAC/reze-tongue-out-reze-chainsaw-man-moving-her-head.gif) center;
     background-size: cover;
 }
 
-#logo{
-    background: #333 url(https://media1.tenor.com/m/uk9xO0xpWoIAAAAC/burger-eating.gif) center;
-    background-size: cover;
-}
 
 .profile_holder.show {
     opacity: 1;
@@ -116,29 +138,6 @@ body {
 .card.show {
     opacity: 1;
     transform: translateX(0);
-}
-
-
-h1 {
-    position: absolute;
-    top: 1%;
-    left: 10%;
-    transform: translate(-10%, -1%);
-    border: 1px solid;
-
-    width: 40vw;
-    height: 12vh;
-}
-
-p1 {
-    position: absolute;
-    top: 64%;
-    left: 40%;
-    transform: translate(-40%, -64%);
-    border: 1px solid;
-
-    width: 48vw;
-    height: 36vh;
 }
 
 .card_select_display {
@@ -187,4 +186,449 @@ p1 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+
+.intro_name {
+    background-color: #131417;
+    color: #e5e5e5;
+    font-size: 2.35rem;
+    text-transform: uppercase;
+    height: 24vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 1rem;
+    border-radius: 15px;
+
+    p {
+        text-shadow: 0 0 7px rgba(255, 255, 255, .3), 0 0 3px rgba(255, 255, 255, .3);
+    }
+
+}
+
+.animation {
+    height: 50px;
+    overflow: hidden;
+    margin-left: 1rem;
+    padding: 0.5rem;
+}
+
+.animation>div>div {
+    padding: 0.25rem 0.75rem;
+    height: 2.81rem;
+    margin-bottom: 2.81rem;
+    display: inline-block;
+}
+
+.animation div:first-child {
+    animation: text-animation 12s infinite;
+}
+
+.first div {
+    background-color: #20a7d8;
+}
+
+.second div {
+    background-color: #CD921E;
+}
+
+.third div {
+    background-color: #c10528;
+}
+
+@keyframes text-animation {
+    0% {
+        margin-top: 0;
+    }
+
+    10% {
+        margin-top: 0;
+    }
+
+    20% {
+        margin-top: -5.62rem;
+    }
+
+    30% {
+        margin-top: -5.62rem;
+    }
+
+    40% {
+        margin-top: -11.24rem;
+    }
+
+    60% {
+        margin-top: -11.24rem;
+    }
+
+    70% {
+        margin-top: -5.62rem;
+    }
+
+    80% {
+        margin-top: -5.62rem;
+    }
+
+    90% {
+        margin-top: 0;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+.software-container {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 36vh;
+    width: 18vw;
+    margin: 0;
+    background: #e2d95b;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.software-text {
+    top: 70%;
+    position: absolute;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #faf8f8;
+    animation: software 3s infinite;
+}
+
+.software-text::before,
+.software-text::after {
+    content: 'Software';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #e96c9a;
+    background: transparent;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 20%);
+    animation: software 2s infinite;
+}
+
+.software-text::after {
+    color: #939edd;
+    clip-path: polygon(0 30%, 80% 80%, 100% 100%, 0 100%);
+}
+
+@keyframes software {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        transform: translate(2px, -2px);
+    }
+
+    60% {
+        transform: translate(-1px, 1px);
+    }
+
+    80% {
+        transform: translate(1px, -1px);
+    }
+}
+
+.Engineer-text {
+    top: 82%;
+    position: absolute;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #faf8f8;
+    animation: Engineer 3s infinite;
+}
+
+.Engineer-text::before,
+.Engineer-text::after {
+    content: 'Enigneer';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #e96c9a;
+    background: transparent;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 20%);
+    animation: Engineer 2s infinite;
+}
+
+.Engineer-text::after {
+    color: #939edd;
+    clip-path: polygon(0 30%, 80% 80%, 100% 100%, 0 100%);
+}
+
+@keyframes Engineer {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        transform: translate(2px, -2px);
+    }
+
+    60% {
+        transform: translate(-1px, 1px);
+    }
+
+    80% {
+        transform: translate(1px, -1px);
+    }
+}
+
+.ai-container {
+    display: grid;
+    height: 36vh;
+    width: 18vw;
+    color: #fff;
+    position: absolute;
+    background: #e96c9a;
+    top: 44.3%;
+    left: 33.3%;
+    border-radius: 15px;
+}
+
+.ai-text {
+    top: 37%;
+    position: absolute;
+    place-self: center;
+    background: linear-gradient(90deg, #7FCCEB, #57C785, #EDDD53) -100%/ 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font: 900 clamp(3.6em, 1vw, 1em) exo, sans-serif;
+    animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+    to {
+        background-position: 100%
+    }
+}
+
+/* avoid problems in high contrast mode */
+@media (forced-colors: active) {
+    p {
+        background: #212121;
+        color: aquamarine
+    }
+}
+
+.eng-text {
+    top: 64%;
+    position: absolute;
+    place-self: center;
+    background: linear-gradient(90deg, #7FCCEB, #57C785, #EDDD53) -100%/ 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font: 900 clamp(1.8em, 1vw, 1em) exo, sans-serif;
+    animation: shimmer 4s linear infinite;
+}
+
+.data-container {
+    display: flex;
+    height: 36vh;
+    width: 18vw;
+    position: absolute;
+    top: 44.3%;
+    left: 66.7%;
+    border-radius: 15px;
+
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: #3ab5e6;
+    color: #fff;
+    font-family: 'Fira Mono', monospace;
+    letter-spacing: -1px;
+}
+
+.data-text {
+    animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+
+    2%,
+    64% {
+        transform: translate(2px, 0) skew(0deg);
+    }
+
+    4%,
+    60% {
+        transform: translate(-2px, 0) skew(0deg);
+    }
+
+    62% {
+        transform: translate(0, 0) skew(5deg);
+    }
+}
+
+.data-text:before,
+.data-text:after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+}
+
+.data-text:before {
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+
+    2%,
+    64% {
+        transform: translate(2px, -2px);
+    }
+
+    4%,
+    60% {
+        transform: translate(-2px, 2px);
+    }
+
+    62% {
+        transform: translate(13px, -1px) skew(-13deg);
+    }
+}
+
+.data-text:after {
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+
+    2%,
+    64% {
+        transform: translate(-2px, 0);
+    }
+
+    4%,
+    60% {
+        transform: translate(-2px, 0);
+    }
+
+    62% {
+        transform: translate(-22px, 5px) skew(21deg);
+    }
+}
+
+#data {
+    font-size: 3.6rem;
+    position: absolute;
+    top: 40%;
+}
+
+#eng {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 67%;
+}
+
+
+
+.my_logo {
+    position: absolute;
+    display: grid;
+    grid-template-areas: ". . ." ". text ." ". . .";
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-columns: 1fr auto 1fr;
+    height: 72vh;
+    width: 24vw;
+    margin: 0;
+    overflow: hidden;
+}
+
+h3 {
+    top: 12%;
+    transform: skew(0deg) rotate(0%);
+    grid-area: text;
+    font-family: sans-serif;
+    font-size: 14rem;
+    margin: 0;
+    padding: 30px;
+    color: #1d9099;
+    text-shadow: 1vmin 1vmin 0 #E79C10, -1vmin -1vmin 0 #D53A33;
+}
+
+h4 {
+    top: 52%;
+    left: 4%;
+    position: absolute;
+    transform: skew(0deg) rotate(0%);
+    grid-area: text;
+    font-family: sans-serif;
+    font-size: 4rem;
+    margin: 0;
+    padding: 25px;
+    color: #1d9099;
+    text-shadow: 1vmin 1vmin 0 #E79C10, -1vmin -1vmin 0 #D53A33;
+}
+
+#logo {
+    background: #333 url(https://i.gifer.com/origin/4c/4c1f3b1f4b6f7b1f5e2e2f1f5e2e2f1f.gif) center;
+    background-size: cover;
+}
+
+.frieren {
+    position: absolute;
+    width: 50%;
+
+    top: 20%;
+    left: 45%;
+}
+
+.soft_gif {
+    position: absolute;
+    width: 15%;
+
+    top: 50%;
+    left: 10%;
+
+    z-index: 1;
+
+    border-radius: 10px;
+}
+
+.ai_gif {
+    position: absolute;
+    width: 45%;
+
+    top: 10%;
+    left: 28%;
+
+    border-radius: 10px;
+}
+
+.data_gif {
+    position: absolute;
+    width: 45%;
+
+    top: 10%;
+    left: 28%;
+
+    border-radius: 10px;
 }
