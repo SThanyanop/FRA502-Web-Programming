@@ -25,39 +25,44 @@
 
 .profile_holder {
     position: absolute;
-    top: 50%;
-    left: 20%;
-    transform: translate(-20%, -50%);
+    top: 13%;
+    left: 15%;
 
     width: 24vw;
     height: 72vh;
 
     border: 1px solid;
+
+    opacity: 0;
+    transform: translateY(15%);
+    transition: opacity 0.5s ease, transform 0.5s ease
 }
 
-#main_profile{
-    top: 40%;
-    left: 18%;
-    transform: translate(-18%, -40%);
-}
-
-#logo{
-    top: 60%;
-    left: 22%;
-    transform: translate(-22%, -60%);
+.profile_holder.show{
+    opacity: 1;
+    transform: translateX(0)
 }
 
 .card {
     position: absolute;
-    top: 50%;
-    left: 90%;
-    transform: translate(-90%, -50%);
+    top: 18%;
+    left: 43%;
 
     width: 52vw;
     height: 64vh;
 
     border: 1px solid;
+
+    opacity: 0;
+    transform: translateX(15%);
+    transition: opacity 0.5s ease, transform 0.5s ease
 }
+
+.card.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
 
 h1 {
     position: absolute;
@@ -96,6 +101,13 @@ p1 {
 .card_location{
     position: absolute;
     border: 1px solid;
+
+    top: 60%;
+    left: 30%;
+    transform: translate(-30%, -60%);
+
+    width: 20vw;
+    height: 1vh;
 }
 
 .right_btn{

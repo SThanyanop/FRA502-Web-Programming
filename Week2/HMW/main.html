@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About me</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script src="js/script.js"></script>
 </head>
 
 <body>
     <div class="background"></div>
     <div class="profile_display_btn">
-        <button class="profile_select_btn" id="profile_1"></button>
-        <button class="profile_select_btn" id="profile_2"></button>
-        <button class="profile_select_btn" id="profile_3"></button>
+        <button class="profile_select_btn" id="profile_1" onclick="show_mainProfile()"></button>
+        <button class="profile_select_btn" id="profile_2" onclick="show_subProfile()""></button>
+        <button class="profile_select_btn" id="profile_3" onclick="show_logo()""></button>
     </div>
-    <div class="profile_holder" id="main_profile"></div>
+    <div class="profile_holder show" id="main_profile"></div>
     <div class="profile_holder" id="sub_profile"></div>
     <div class="profile_holder" id="logo"></div>
 
-    <div class="card" id="intro">
+    <div class="card show" id="intro">
         <h1 class="header">S.Thanyanop</h1>
         <p1 class="describe">Who i am</p1>
     </div>
@@ -46,8 +47,8 @@
 
     <div class="card_select_display">
         <div class="card_location"></div>
-        <button class="left_btn"></button>
-        <button class="right_btn"></button>
+        <button class="left_btn" onclick="swapCardtoleft()"></button>
+        <button class="right_btn" onclick="swapCardtoright()"></button>
     </div>
 
 </body>
